@@ -5,15 +5,15 @@
 
 @layer components {
 	.card-background {
-		@apply rounded-3xl bg-white/30 p-10 dark:bg-black/30;
+		@apply rounded-3xl bg-black/30 p-10;
 	}
 
-	.theme-change-anim {
-		@apply transition-colors delay-200 ease-linear;
+	.social-media-container {
+		@apply grid grid-cols-5 gap-2;
 	}
 
 	.social-media-btn {
-		@apply mb-2 me-2 flex items-center justify-center rounded-lg p-2.5 text-xl text-neutral-900 hover:bg-white/10 hover:text-black dark:text-gray-200 dark:hover:bg-zinc-600/50 dark:hover:text-white;
+		@apply mb-2 me-2 flex items-center justify-center rounded-lg p-2.5 text-xl text-neutral-200 hover:hover:bg-white/10 hover:text-white;
 	}
 }
 

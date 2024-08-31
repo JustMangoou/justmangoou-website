@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CircleIcon } from '$lib/components/Icons';
+	import { CircleIcon } from '$lib/icons';
 	import { onMount } from 'svelte';
 
 	class Instruction {
@@ -18,12 +18,12 @@
 		}
 	}
 
-	const instructions = [
+	const instructions: Instruction[] = [
 		new Instruction('cd ./earth', undefined),
 		new Instruction('git pull', 'Already up to date.'),
 		new Instruction(
 			'cat tuan_nguyen.json',
-			'{\n"full_name": "Nguyen Hoang Tuan",\n"birth": "March 2006 (Hanoi, Vietnam)",\n"fav_color": "#00ffae"\n"fav_env": "🌧Rainy | ❄Winter"\n}'
+			'{\n"full_name": "Nguyen Hoang Tuan",\n"birth": "March 2006 (Hanoi, Vietnam)",\n"fav_color": "#00FFAE"\n"fav_env": "🌧Rainy | ❄Winter"\n}'
 		)
 	];
 
@@ -34,6 +34,8 @@
 	onMount(() => next());
 
 	function next() {
+		if (index >= instructions.length) return;
+
 		current = { ...instructions[index] };
 		current.typed = '';
 		current.index = 0;
@@ -64,7 +66,7 @@
 </script>
 
 <div
-	class="theme-change-anim relative m-2 h-[18em] h-[25em] rounded-xl p-4 font-mono text-lg text-white bg-black/50 sm:h-[18em] sm:w-[25em] sm:text-xl"
+	class="relative m-2 h-[25em] rounded-xl bg-black/50 p-4 font-mono text-lg text-white sm:h-[18em] sm:w-[25em] sm:text-xl"
 >
 	<div class="mb-4">
 		<div class="flex gap-1 text-sm">

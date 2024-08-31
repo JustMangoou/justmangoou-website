@@ -3,7 +3,7 @@
 	import '../app.css';
 </script>
 
-<div class="flex min-h-screen flex-col">
+<section class="flex min-h-screen flex-col">
 	<Header></Header>
 
 	<main class="m-auto">
@@ -13,7 +13,7 @@
 	<footer class="flex flex-col items-center justify-center p-2 text-zinc-800">
 		<p class="font-bold">© 2024 JustMango</p>
 	</footer>
-</div>
+</section>
 
 <style>
 	:global(body) {

@@ -8,77 +8,74 @@
 		PinterestIcon,
 		SpotifyIcon,
 		SoundCloudIcon
-	} from '$lib/components/Icons';
-
-	let username = 'justmangoou';
-	let oldUsername = 'justmangot'; // Use for reddit only
-	let spotifyId = 'pdjj0m8thgqufmstx2qohc5sx';
+	} from '$lib/icons';
+	import { Username, OldUsername, SpotifyID } from '$lib/utils';
 </script>
 
 <div class="p-2">
 	<p class="text-2xl font-bold underline">Connections</p>
-	<p class="font-meidum text-sm text-gray-600 dark:text-gray-400 italic">
+	<p class="font-meidum text-sm italic text-zinc-500">
 		I uses those apps personally, any work-related please contact through Email/Discord.
 	</p>
-	<div class="grid auto-rows-auto grid-cols-5 gap-2">
+	<div class="social-media-container">
 		<a
 			class="social-media-btn"
-			href="https://reddit.com/u/{oldUsername}"
+			href="https://reddit.com/u/{OldUsername}"
 			target="_blank"
 			aria-label="Reddit"
 		>
-			<RedditIcon class="theme-change-anim" />
+			<RedditIcon />
 		</a>
-		<a class="social-media-btn" href="https://x.com/{username}" target="_blank" aria-label="X">
-			<XTwitterIcon class="theme-change-anim" />
+		<a class="social-media-btn" href="https://x.com/{Username}" target="_blank" aria-label="X">
+			<XTwitterIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://facebook.com/{username}"
+			href="https://facebook.com/{Username}"
 			target="_blank"
 			aria-label="Facebook"
 		>
-			<FacebookIcon class="theme-change-anim" />
+			<FacebookIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://instagram.com/{username}"
+			href="https://instagram.com/{Username}"
 			target="_blank"
 			aria-label="Instagram"
 		>
-			<InstagramIcon class="theme-change-anim" />
+			<InstagramIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://tiktok.com/@{username}"
+			href="https://tiktok.com/@{Username}"
 			target="_blank"
 			aria-label="TikTok"
 		>
-			<TikTokIcon class="theme-change-anim" />
+			<TikTokIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://pinterest.com/{username}"
+			href="https://pinterest.com/{Username}"
 			target="_blank"
 			aria-label="Pinterest"
 		>
-			<PinterestIcon class="theme-change-anim" />
+			<PinterestIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://open.spotify.com/user/{spotifyId}"
+			href="https://open.spotify.com/user/{SpotifyID}"
 			target="_blank"
 			aria-label="Spotify"
 		>
-			<SpotifyIcon class="theme-change-anim" />
+			<SpotifyIcon />
 		</a>
 		<a
 			class="social-media-btn"
-			href="https://soundcloud.com/{username}"
+			href="https://soundcloud.com/{Username}"
 			target="_blank"
-			aria-label="Soundcloud"
+			aria-label="SoundCloud"
 		>
-			<SoundCloudIcon class="theme-change-anim" />
+			<SoundCloudIcon />
 		</a>
 	</div>
 </div>

@@ -6,7 +6,21 @@ export default {
 	darkMode: 'class',
 
 	theme: {
-		extend: {}
+		extend: {
+			keyframes: {
+				slideInFromBottom: {
+					'0%': {
+						transform: 'translateY(2vh)'
+					},
+					'100%': {
+						transform: 'translateY(0)'
+					}
+				}
+			},
+			animation: {
+				'slide-in-from-bottom': 'slideInFromBottom 0.5s ease-out'
+			}
+		}
 	},
 
 	plugins: [typography]
